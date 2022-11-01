@@ -1,0 +1,12 @@
+﻿@model AwwAPI
+
+@foreach (Child c in Model.data.children)
+{
+    @*@for (int i = 0; i < 0; i++)*@
+        <p>Title: @c.data.title</p>
+    @*<p>Image: @Model.data.children[3].data.preview.images</p>*@
+        <img src="@c.data.thumbnail" alt="@c.data.title" />
+        <p><a href="@($"https://reddit.com{c.data.permalink}")">Path</a></p>
+        <br />
+        <br />
+}
